@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Alura\Solid\Core;
 
-interface Watchable
+interface Punctuable
 {
-    public function watch(): void;
+    public function getScore(): float;
 }

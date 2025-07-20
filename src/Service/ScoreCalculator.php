@@ -2,11 +2,11 @@
 
 namespace Alura\Solid\Service;
 
-use Alura\Solid\Core\Watchable;
+use Alura\Solid\Core\Punctuable;
 
 class ScoreCalculator
 {
-    public function getScore(Watchable $content): float
+    public function getScore(Punctuable $content): float
     {
         return $content->getScore();
     }

@@ -2,10 +2,11 @@
 
 namespace Alura\Solid\Model;
 
+use Alura\Solid\Core\Punctuable;
 use Alura\Solid\Core\Watchable;
 use DateInterval;
 
-class Video implements Watchable
+class Video implements Watchable, Punctuable
 {
     protected bool $watched = false;
     protected DateInterval $duracao;

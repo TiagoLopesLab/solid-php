@@ -2,15 +2,16 @@
 
 namespace Alura\Solid\Model;
 
+use Alura\Solid\Core\Punctuable;
 use Alura\Solid\Core\Watchable;
 use DomainException;
 
-class Course implements Watchable
+class Course implements Watchable, Punctuable
 {
     /** @var array<Video> $videos */
     private array $videos;
     /** @var array<Feedback> $feedbacks */
-    private array $feedbacks;
+    private(set) array $feedbacks;
 
     public function __construct(public readonly string $name)
     {
