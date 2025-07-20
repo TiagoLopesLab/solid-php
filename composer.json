@@ -1,0 +1,12 @@
+{
+  "name": "tiagolopes/alura-solid",
+  "version": "1.0.0",
+  "autoload": {
+    "psr-4": {
+      "Alura\\Solid\\": "src/"
+    }
+  },
+  "require": {
+    "php": "8.4"
+  }
+}
