@@ -2,12 +2,14 @@
 
 namespace Alura\Solid\Model;
 
-use Alura\Solid\Core\Punctuable;
+use Alura\Solid\Core\Watchable;
 use DomainException;
 
-class Course implements Punctuable
+class Course implements Watchable
 {
+    /** @var array<Video> $videos */
     private array $videos;
+    /** @var array<Feedback> $feedbacks */
     private array $feedbacks;
 
     public function __construct(public readonly string $name)
@@ -36,8 +38,15 @@ class Course implements Punctuable
         return $this->videos;
     }
 
+    public function watch(): void
+    {
+        foreach ($this->videos as $video) {
+            $video->watch();
+        }
+    }
+
     public function getScore(): float
     {
-        return $this->durationMinutes() * 2;
+        return 100;
     }
 }
