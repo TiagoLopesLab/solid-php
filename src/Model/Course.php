@@ -15,13 +15,9 @@ class Course
         $this->feedbacks = [];
     }
 
-    public function receiveFeedback(int $nota, ?string $depoimento): void
+    public function receiveFeedback(Feedback $feedback): void
     {
-        if ($nota < 9 && empty($depoimento)) {
-            throw new DomainException('Depoimento obrigatório');
-        }
-
-        $this->feedbacks[] = [$nota, $depoimento];
+        $this->feedbacks[] = $feedback;
     }
 
     public function addVideo(Video $video): void
