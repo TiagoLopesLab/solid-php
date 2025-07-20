@@ -2,9 +2,10 @@
 
 namespace Alura\Solid\Model;
 
+use Alura\Solid\Core\Punctuable;
 use DomainException;
 
-class Course
+class Course implements Punctuable
 {
     private array $videos;
     private array $feedbacks;
@@ -33,5 +34,10 @@ class Course
     public function getVideos(): array
     {
         return $this->videos;
+    }
+
+    public function getScore(): float
+    {
+        return $this->durationMinutes() * 2;
     }
 }

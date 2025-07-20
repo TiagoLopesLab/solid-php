@@ -2,9 +2,10 @@
 
 namespace Alura\Solid\Model;
 
+use Alura\Solid\Core\Punctuable;
 use DateInterval;
 
-class Video
+class Video implements Punctuable
 {
     protected bool $watched = false;
     protected DateInterval $duracao;
@@ -28,5 +29,10 @@ class Video
     public function getUrl(): string
     {
         return 'http://videos.alura.com.br/' . http_build_query(['name' => $this->name]);
+    }
+
+    public function getScore(): float
+    {
+        return $this->durationMinutes() * 2;
     }
 }
