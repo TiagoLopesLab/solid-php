@@ -1,12 +1,12 @@
 {
-  "name": "tiagolopes/alura-solid",
+  "name": "tiagolopes/solid-php",
   "version": "1.0.0",
   "autoload": {
     "psr-4": {
-      "Alura\\Solid\\": "src/"
+      "Tiagolopes\\Solid\\": "src/"
     }
   },
   "require": {
-    "php": "8.4"
+    "php": "^8.4"
   }
 }
