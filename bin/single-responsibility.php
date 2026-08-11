@@ -8,7 +8,7 @@ use Tiagolopes\Solid\SingleResponsibility\OrderCalculator;
 use Tiagolopes\Solid\SingleResponsibility\OrderProcessor;
 use Tiagolopes\Solid\SingleResponsibility\PaymentProcessor;
 
-require_once 'vendor/autoload.php';
+require_once dirname(__DIR__) . '/vendor/autoload.php';
 
 $order = new Order(
     uuid: '3424234234-sdasdas324234-32423dasfsd',
